@@ -10,8 +10,10 @@ binary_tree_t *p, *pp;
 if (node == NULL)
 return (NULL);
 p = node->parent;
+if (p == NULL)
+return (NULL);
 pp = p->parent;
-if (p == NULL || pp == NULL)
+if (pp == NULL)
 return (NULL);
 if (p == pp->left)
 return (pp->right);

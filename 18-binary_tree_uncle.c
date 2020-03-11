@@ -13,13 +13,8 @@ p = node->parent;
 pp = p->parent;
 if (p == NULL || pp == NULL)
 return (NULL);
-if (p == pp->left && pp->left && pp)
-{
+if (p == pp->left)
 return (pp->right);
-}
-else if (p == pp->right && pp->right && pp)
-{
+else
 return (pp->left);
-}
-return (NULL);
 }
